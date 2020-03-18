@@ -1,0 +1,76 @@
+form {
+    padding: 20px;
+}
+input,
+select,
+textarea {
+    background: none;
+    border: 0;
+}
+
+.form-el {
+    background: #fff;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 4px 8px;
+}
+
+.form-el label {
+    display: block;
+}
+
+.form-el input,
+.form-el textarea,
+.form-el select {
+    width: 100%;
+    display: block;
+}
+
+.form-el select {
+    -webkit-appearance: none;
+    appearance: none;
+    background: url('../images/arrow-down.svg.png') no-repeat right center;
+    background-size: 20px;
+}
+
+.fancy-select {
+    border: 1px solid #222;
+    background-color: #fff;
+    position: relative;
+    height: 50px;
+    display: block;
+}
+
+.fancy-select select {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    display: block;
+    height: 100%;
+    padding-left: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.fancy-select {
+    background: url('../images/pin.jpg') no-repeat left center;
+    background-size: 30px;
+}
+
+.fancy-select::after {
+    position: absolute;
+    background: #aaa url('../images/arrow-down.svg.png') no-repeat 50% 50%;
+    background-size: 30px;
+    content: "";
+    display: block;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    z-index: 0;
+}
+
+.fancy-select:hover::after {
+    background-color: bisque;
+}

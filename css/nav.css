@@ -1,0 +1,84 @@
+.nav {
+    background: #222;
+    position: fixed;
+    width: 300px;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    bottom: 0;
+    z-index: 100;
+    transition: right 500ms ease-in;
+}
+
+.nav-active {
+    overflow: hidden;
+}
+
+.nav-active .nav {
+    right: 0;
+    transition: right 500ms ease-in;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        width: 100%;
+        position: static;
+        display: block;
+    }
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .nav ul {
+        font-size: 0;
+        text-align: center;
+    }
+}
+
+.nav li {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .nav li {
+        display: inline-block;
+    }
+}
+
+.nav a {
+    display: block;
+    padding: 12px 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #c8c8c8;
+}
+
+.btn-wrap {
+    text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+    .btn-wrap {
+        display: none;
+    }
+}
+
+.wrapper {
+    position: relative;
+    transition: right 500ms ease-in;
+    right: 0;
+}
+
+.nav-active .wrapper {
+    right: 300px;
+    transition: right 500ms ease-in;
+}
