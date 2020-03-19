@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script>
         function toggleNav() {
             document.body.classList.toggle('nav-active');
+        }
+
+        function openModal() {
+            document.getElementById('overlay').classList.add('active');
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('overlay').classList.remove('active');
+            document.getElementById('modal').classList.remove('active');
         }
     </script>
 </head>
@@ -30,8 +41,9 @@
     </nav>
     <div class="wrapper">
         <div class="btn-wrap">
-            <button onclick="toggleNav()">Toggle</button>
+            <button onclick="toggleNav()">Toggle Nav</button>
         </div>
+        <button onclick="openModal()">Open modal</button>
         <form action="#">
             <div class="form-el">
                 <label for="textField">Last Name</label>
@@ -162,5 +174,12 @@
     Pellentesque interdum sit amet mauris vel mollis. Etiam magna mi, interdum et sapien at, suscipit vehicula lectus. Suspendisse fermentum vulputate nibh non sodales. Praesent eu eros et nisi efficitur dapibus. Donec vehicula orci ut ultrices bibendum. Aliquam eros mauris, tempor vitae tortor quis, volutpat ultrices ligula. Nullam nec tempus metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in nulla non sem porttitor posuere ac vel justo.
         </p>
     </div>
+    <div class="modal" id="modal">
+        <span class="close-modal" onclick="closeModal()">X</span>
+        <h1>Are you sure?</h1>
+        <button onclick="closeModal()">No</button>
+        <button>Yes</button>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
 </body>
 </html>
